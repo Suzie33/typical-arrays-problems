@@ -25,6 +25,14 @@ exports.max = function max (array = []) {
   return maxValue;
 }
 
-exports.avg = function avg (array) {
-  return 0;
+exports.avg = function avg (array = [0]) {
+  let sum = 0;
+  let avgValue = 0;
+
+  for (let item of array) {
+    sum += item;
+  }
+
+  if (array.length) avgValue = sum / array.length;
+  return avgValue;
 }
